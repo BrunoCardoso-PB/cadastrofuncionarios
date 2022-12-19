@@ -1,0 +1,4 @@
+#Ignore a pasta node_modules
+node_modules
+#Ignore a pasta package-lock.json
+package-lock.json

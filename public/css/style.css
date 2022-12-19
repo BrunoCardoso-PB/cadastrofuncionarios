@@ -1,0 +1,65 @@
+a{
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*head - nav*/
+.header {
+    padding: 10px 0;
+}
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding-left: 20px;
+}
+.logo-cadastro-funcionarios{
+    margin: 0 auto;
+    color: white;
+    padding-right: 100px;
+}
+
+.btn-links{
+    max-width: 1200px;
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn-links a{
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.btn-links .listar-todos {
+    margin-top: 20px;
+    padding: 10px 135px;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+button:disabled{
+    box-shadow: 100%;
+    
+}
+
+/*Page Consultar*/
+.consultar {
+    max-width: 1200px;
+}
+.consultar-form{
+    max-width: 1200px;
+    margin: 0 auto;
+}
