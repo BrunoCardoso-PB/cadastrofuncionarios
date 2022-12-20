@@ -54,7 +54,7 @@ app.post("/consultaOne",(req, res)=>{
                 cadastro: cadastro
             })
         }else{
-            res.redirect("/")
+            res.redirect("/consultaOne")
         }
     })
 })
@@ -65,13 +65,10 @@ app.get("/deletarcadastro/:id",(req,res)=>{
         where: {id:id}
     }).then(cadastro => {
         if(cadastro != undefined){
-            res.render("deletarcadastro",{
-                cadastro: cadastro
-            })
+            res.redirect("/listAll")
         }
     })
 })
-
 /****************************************** */
 app.post("/salvarcadastro",(req,res)=>{
     let nome = req.body.nome;

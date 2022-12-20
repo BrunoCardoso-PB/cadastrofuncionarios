@@ -11,9 +11,9 @@
                 <form method="post" action="/consultaOne">
                     <label>CPF</label>
                     <br>
-                    <input type="number" placeholder="informe o CPF" class="form-control" name="cpf">
+                    <input type="number" placeholder="informe o CPF" class="form-control" name="cpf" id="cpf" onkeyup="toggleButtonConsultar()">
                     <br>
-                    <a href="/consultaOne/"><button class="btn btn-success">Consultar</button></a>
+                    <button class="btn btn-success" id="consultar" disabled>Consultar</button></a>
                 </form>
             </div>
         </div>

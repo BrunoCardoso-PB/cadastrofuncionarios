@@ -11,18 +11,18 @@
             <div class="card-body">
                 <form method="post" action="/salvarcadastro">
                     <label>Nome Completo</label>
-                    <input type="text" placeholder="Digite aqui o nome completo" class="form-control" name="nome" id="nome" onchange="toggleButton()">
+                    <input type="text" placeholder="Digite aqui o nome completo" class="form-control" name="nome" id="nome" onchange="toggleButtonCadastrar()">
                     <br>
                     <label>CPF</label>
-                    <input type="number" placeholder="Digite aqui o CPF" class="form-control" name="cpf" id="cpf" onchange="toggleButton()">
+                    <input type="number" placeholder="Digite aqui o CPF" class="form-control" name="cpf" id="cpf" onchange="toggleButtonCadastrar()">
                     <br>
                     <label>Bairro</label>
-                    <input type="text" placeholder="Digite aqui o bairro" class="form-control" name="bairro" id="bairro" onchange="toggleButton()">
+                    <input type="text" placeholder="Digite aqui o bairro" class="form-control" name="bairro" id="bairro" onchange="toggleButtonCadastrar()">
                     <br>
                     <label>Cidade</label>
-                    <input type="text" placeholder="Digite aqui a cidade" class="form-control" name="cidade" id="cidade" onkeyup="toggleButton()">
+                    <input type="text" placeholder="Digite aqui a cidade" class="form-control" name="cidade" id="cidade" onkeyup="toggleButtonCadastrar()">
                     <br>
-                    <button disabled type="submit" class="btn btn-primary btn-cadastrar-pg-cadastro" id="deletar">Cadastrar</button>
+                    <button disabled class="btn btn-primary btn-cadastrar-pg-cadastro" id="deletar">Cadastrar</button>
                 </form>
             </div>
         </div>
