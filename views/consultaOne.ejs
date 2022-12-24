@@ -7,13 +7,16 @@
                 <% cadastro.forEach(cadastro=> { %>
                     <div class="card">
                         <div class="card-body">
-                                <h5>Id: <%= cadastro.id %></h5>
                                 <h4>Nome: <%= cadastro.nome %></h4>
                                 <h5>CPF: <%= cadastro.cpf %></h5>
                                 <h5>Bairro: <%= cadastro.bairro %></h5>
                                 <h5>Cidade: <%= cadastro.cidade %></h5>
+                                <h5>Função: <%= cadastro.funcao %></h5>
                                 <br>
-                                <a href="/deletarcadastro/<%= cadastro.id %>"><button class="btn btn-danger">Deletar</button></a>
+                                <form method="post" action="/deletarcadastro" onsubmit="confirmarExclusao(event, this)">
+                                    <input type="hidden" name="id" value="<%= cadastro.id %>">
+                                    <button class="btn btn-danger">Deletar</button>
+                                </form>
                         </div>
                     </div>
                     <br />

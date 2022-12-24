@@ -3,7 +3,7 @@
 <body>
     <%- include ('./partials/navbar.ejs') %>
     <br>
-    <div class="container">
+    <div class="container container-cadastrar">
         <div class="card">
             <div class="card-header">
                 <h3>Cadastrar</h3>
@@ -13,16 +13,28 @@
                     <label>Nome Completo</label>
                     <input type="text" placeholder="Digite aqui o nome completo" class="form-control" name="nome" id="nome" onchange="toggleButtonCadastrar()">
                     <br>
-                    <label>CPF</label>
-                    <input type="number" placeholder="Digite aqui o CPF" class="form-control" name="cpf" id="cpf" onchange="toggleButtonCadastrar()">
+                    <label for="cep">CEP</label>
+                    <input type="text" placeholder="Digite o CEP" class="form-control" name="cep" id="cep" onkeyup="toggleButtonCadastrar()">
+                    <br>
+                    <label>Endereço</label>
+                    <input type="text" placeholder="Informe o endereço" class="form-control" name="endereco" id="logradouro" onkeyup="toggleButtonCadastrar()">
                     <br>
                     <label>Bairro</label>
-                    <input type="text" placeholder="Digite aqui o bairro" class="form-control" name="bairro" id="bairro" onchange="toggleButtonCadastrar()">
+                    <input type="text" placeholder="Informe o bairro" class="form-control" name="bairro" id="bairro" onkeyup="toggleButtonCadastrar()">
                     <br>
                     <label>Cidade</label>
-                    <input type="text" placeholder="Digite aqui a cidade" class="form-control" name="cidade" id="cidade" onkeyup="toggleButtonCadastrar()">
+                    <input type="text" placeholder="Informe a cidade" class="form-control" name="cidade" id="localidade" onkeyup="toggleButtonCadastrar()">
                     <br>
-                    <button disabled class="btn btn-primary btn-cadastrar-pg-cadastro" id="deletar">Cadastrar</button>
+                    <label>UF</label>
+                    <input type="text" placeholder="Informe a UF" class="form-control" name="uf" id="uf" onkeyup="toggleButtonCadastrar()">
+                    <br>
+                    <label>Função</label>
+                    <input required type="text" placeholder="Informe a função do funcionário" class="form-control" name="funcao" id="funcao" onkeyup="toggleButtonCadastrar()">
+                    <br>
+                    <label>CPF</label>
+                    <input required type="number" placeholder="Digite aqui o CPF" class="form-control" name="cpf" id="cpf" onkeyup="toggleButtonCadastrar()">
+                    <br>
+                    <button disabled type="submit" class="btn btn-primary btn-cadastrar-pg-cadastro" id="btn-cadastrar" onclick="cadastroSucesso()">Cadastrar</button>
                 </form>
             </div>
         </div>

@@ -1,21 +1,48 @@
 <%- include ('./partials/head.ejs') %>
+<%- include ('./partials/navbar.ejs') %>
+
 <body>
-    <%- include ('./partials/navbar.ejs') %>
-    <br>
-    <div class="container">
-        <% cadastro.forEach(cadastro => { %>
-            <div class="card">
-                    <div class="card-body">
-                        <h5>Id: <%= cadastro.id %></h5>
-                        <h4>Nome: <%= cadastro.nome %></h4>
-                        <h5>CPF: <%= cadastro.cpf %></h5>
-                        <h5>Bairro: <%= cadastro.bairro %></h5>
-                        <h5>Cidade: <%= cadastro.cidade %></h5>
-                        <a href="/deletarcadastro/<%= cadastro.id %>"><button class="btn btn-danger">Deletar</button></a>
-                    </div>
-            </div>   
-            <br>         
-        <% }) %>
+    <div class="tb-teste">
+        <br>
+        <button onclick="window.print()">Imprimir</button><br>
+        <br>
+        <table class="table table-primary table-bordered tabela-listAll">
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>CPF</th>
+                    <th>CEP</th>
+                    <th>ENDEREÇO</th>
+                    <th>BAIRRO</th>
+                    <th>CIDADE</th>
+                    <th>UF</th>                    
+                    <th>FUNÇÃO</th>
+                    <!-- <th>AÇÃO</th> -->
+                </tr>
+            </thead>
+            <% cadastro.forEach(cadastro => { %>
+            <tbody>
+                <tr>
+                    <th><%= cadastro.nome %></th>
+                    <th><%= cadastro.cpf %></th>
+                    <th><%= cadastro.cep %></th>
+                    <th><%= cadastro.endereco %></th>
+                    <th><%= cadastro.bairro %></th>
+                    <th><%= cadastro.cidade %></th>
+                    <th><%= cadastro.uf %></th>
+                    <th><%= cadastro.funcao %></th>
+                    <!-- <th>
+                        <form method="post" action="/deletarcadastro" onsubmit="confirmarExclusao(event, this)">
+                            <input type="hidden" name="id" value="<%= cadastro.id %>">
+                            <button class="btn btn-danger">Deletar</button>
+                        </form>
+                    </th> -->
+                </tr>
+            </tbody>
+            <% }) %>
+        </table>
+        
     </div>
 </body>
+
 <%- include ('./partials/footer.ejs') %>

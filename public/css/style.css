@@ -21,6 +21,10 @@ a{
     padding-right: 100px;
 }
 
+.container-home a{
+    margin: 0 auto;
+}
+
 .btn-links{
     max-width: 1200px;
     text-decoration: none;
@@ -29,17 +33,24 @@ a{
     text-align: center;
 }
 .btn-links a{
-    padding: 10px 40px;
-    font-size: 1.2rem;
-    margin-left: 20px;
-    margin-right: 20px;
-    
+    max-width: 300px;
+    font-size: 1rem;
+    display: flex;
+    margin-bottom: 10px;
+    text-align: center;
 }
-.btn-links .listar-todos {
-    margin-top: 20px;
-    padding: 10px 135px;
+.btn-links button{
+    width: 100%;
 }
 
+.container-cadastrar {
+    max-width: 800px;
+}
+
+.tb-teste{
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -56,10 +67,35 @@ button:disabled{
 }
 
 /*Page Consultar*/
-.consultar {
-    max-width: 1200px;
+.page-consultar {
+    max-width: 800px;
 }
 .consultar-form{
     max-width: 1200px;
     margin: 0 auto;
+}
+
+
+
+/****** Media queries ******/
+@media (max-width: 450px){
+    .logo-cadastro-funcionarios{
+        display: none;
+    }
+    .btn-links a{
+        font-size: 1rem;
+        display: flex;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .btn-links button{
+        width: 100%;
+    }
+    .tabela-listAll {
+        font-size: 0.45rem;
+    }
+    .btn-deletar{
+        font-size: 0.5rem;
+
+    }
 }
