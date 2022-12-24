@@ -32,4 +32,6 @@ router.post("/consultaOne",(req, res)=>{
     })
 })
 
+
+
 module.exports = router

@@ -1,0 +1,46 @@
+
+<%- include ('./partials/head.ejs') %>
+<body>
+    <%- include ('./partials/navbar.ejs') %>
+    <br>
+    <div class="container container-cadastrar">
+        <div class="card">
+            <div class="card-header">                
+                <h3>Atualizar Cadastro</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" action="/atualizarCadastro">
+                    <% cadastro.forEach(cadastro => { %>
+                    <label>Nome</label>
+                    <input type="text" name="id" value="<%= cadastro.id %>">
+                    <input type="text" placeholder="Digite aqui o nome completo" class="form-control" name="nome" id="nome"  onchange="toggleButtonCadastrar()" value="<%= cadastro.nome %>">
+                    <br>
+                    <label>CEP</label>
+                    <input type="text" placeholder="Digite o CEP" class="form-control" name="cep" id="cep" onkeyup="toggleButtonCadastrar()" value="<%= cadastro.cep %>">
+                    <br>
+                    <label>Endereço</label>
+                    <input type="text" placeholder="Informe o endereço" class="form-control" name="endereco" id="logradouro"  onkeyup="toggleButtonCadastrar()" value="<%= cadastro.endereco %>">
+                    <br>
+                    <label>Bairro</label>
+                    <input type="text" placeholder="Informe o bairro" class="form-control" name="bairro" id="bairro" onkeyup="toggleButtonCadastrar()" value="<%= cadastro.bairro %>">
+                    <br>
+                    <label>Cidade</label>
+                    <input type="text" placeholder="Informe a cidade" class="form-control" name="cidade" id="localidade" onkeyup="toggleButtonCadastrar()" value="<%= cadastro.cidade %>">
+                    <br>
+                    <label>UF</label>
+                    <input type="text" placeholder="Informe a UF" class="form-control" name="uf" id="uf"  onkeyup="toggleButtonCadastrar()" value="<%= cadastro.uf %>">
+                    <br>
+                    <label>Função</label>
+                    <input required type="text" placeholder="Informe a função do funcionário" class="form-control" name="funcao" id="funcao" onkeyup="toggleButtonCadastrar()" value="<%= cadastro.funcao %>">
+                    <br>
+                    <label>CPF</label>
+                    <input required type="number" placeholder="Digite aqui o CPF" class="form-control" name="cpf" id="cpf" onkeyup="toggleButtonCadastrar()" value="<%= cadastro.cpf %>">
+                    <br>
+                    <button type="submit" class="btn btn-success btn-cadastrar-pg-cadastro" id="btn-cadastrar">Atualizar</button>
+                    <% }) %>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include ('./partials/footer.ejs') %>

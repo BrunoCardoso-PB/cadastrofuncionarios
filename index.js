@@ -1,5 +1,5 @@
 const express = require("express"); // chamando o express.
-const app = express(); // colocando um express numa variável.
+const app = express(); // colocando o express numa variável.
 const connection = require("./database/connection");
 const cadastroController = require("./cadastro/cadastroController");
 const consultaController = require("./consulta/consultaController");
