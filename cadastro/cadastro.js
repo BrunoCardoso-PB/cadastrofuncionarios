@@ -29,6 +29,9 @@ const Cadastro = connection.define('cadastros',{
     },
     uf:{
         type: Sequelize.STRING,
+    },
+    obs:{
+        type: Sequelize.TEXT,
     }
 });
 

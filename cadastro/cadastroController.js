@@ -23,6 +23,7 @@ router.post("/salvarcadastro",(req,res)=>{
     let uf = req.body.uf;
     let funcao = req.body.funcao;
     let cpf = req.body.cpf;
+    let obs = req.body.obs;
 
     let sucesso = Cadastro.create({
         nome: nome,
@@ -33,6 +34,7 @@ router.post("/salvarcadastro",(req,res)=>{
         uf: uf,
         funcao: funcao,
         cpf: cpf,
+        obs: obs,
 
     }).then(()=>{
         if(sucesso){

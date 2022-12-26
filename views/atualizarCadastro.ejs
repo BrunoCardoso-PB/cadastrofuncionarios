@@ -12,7 +12,7 @@
                 <form method="post" action="/atualizarCadastro">
                     <% cadastro.forEach(cadastro => { %>
                     <label>Nome</label>
-                    <input type="text" name="id" value="<%= cadastro.id %>">
+                    <input type="hidden" name="id" value="<%= cadastro.id %>">
                     <input type="text" placeholder="Digite aqui o nome completo" class="form-control" name="nome" id="nome"  onchange="toggleButtonCadastrar()" value="<%= cadastro.nome %>">
                     <br>
                     <label>CEP</label>

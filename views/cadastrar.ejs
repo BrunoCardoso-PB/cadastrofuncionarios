@@ -34,10 +34,17 @@
                     <label>CPF</label>
                     <input required type="number" placeholder="Digite aqui o CPF" class="form-control" name="cpf" id="cpf" onkeyup="toggleButtonCadastrar()">
                     <br>
+                    <label>Outras informações</label>
+                    <textarea class="form-control" name="obs" id="obs"></textarea>
+                    <br>
                     <button disabled type="submit" class="btn btn-primary btn-cadastrar-pg-cadastro" id="btn-cadastrar" onclick="cadastroSucesso()">Cadastrar</button>
+                    <br>
+
                 </form>
             </div>
         </div>
     </div>
 </body>
 <%- include ('./partials/footer.ejs') %>
+<%- include ('./partials/tinymce.ejs') %>
+
